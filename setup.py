@@ -16,7 +16,8 @@ setup(
     packages=find_packages(exclude=['*.pyc']),
     include_package_data=True,
     install_requires=[
-        ],
+        "django==1.5.1"
+    ],
     entry_points={
         'console_scripts': [
             'essay_demo = essay_demo.main:main',
