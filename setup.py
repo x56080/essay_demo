@@ -16,7 +16,8 @@ setup(
     packages=find_packages(exclude=['*.pyc']),
     include_package_data=True,
     install_requires=[
-        "django==1.5.1"
+        'django==1.5.1'
+        'gunicorn'
     ],
     entry_points={
         'console_scripts': [
