@@ -16,7 +16,7 @@ env.PROJECT = 'essay_demo'
 env.BUILD_PATH = '~/buildspace'
 env.PROJECT_OWNER = 'EssayTech'
 env.DEFAULT_BRANCH = 'master'
-env.PYPI_INDEX = 'http://pypi.python.org/simple'
+env.PYPI_INDEX = 'http://127.0.0.1:10110/simple'
 
 ######
 # deploy settings:
