@@ -3,20 +3,18 @@
 
 from setuptools import setup, find_packages
 
-readme = open('README.md').read()
+readme = open('README').read()
 
 setup(
     name='essay_demo',
     version='${version}',
     description=readme.partition('\n')[0],
     long_description=readme,
-    author='wap-tech',
-    author_email='mpcyd@sohu-inc.com',
-    url='http://read.sohu.com',
+    author='EssayTech',
+    author_email='thefivefire@gmail.com',
+    url='http://github.com/EssayTech/essay',
     packages=find_packages(exclude=['*.pyc']),
     include_package_data=True,
-    package_data={
-    },
     install_requires=[
         ],
     entry_points={
