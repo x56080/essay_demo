@@ -24,12 +24,13 @@ env.PROCESS_COUNT = 2  #部署时启动的进程数目
 env.roledefs = {
     'build': ['vagrant@127.0.0.1:2202'],  # 打包服务器配置
     'dev': ['vagrant@127.0.0.1:2201'],
+    'nginx': ['vagrant@127.0.0.1:2201'],
 }
 
 env.VIRTUALENV_PREFIX = '/home/vagrant/essay_demo'
 env.SUPERVISOR_CONF_TEMPLATE = os.path.join(PROJECT_ROOT, 'conf', 'supervisord.conf')
 
-#根据工程确定项目编号, 不同环境保证监听不同的端口
+#根据工程确定项目编号, 不同环境保证监听不同的端口，共通过port参数传到supervisord.conf中。
 PROJECT_NUM = 88
 env.VENV_PORT_PREFIX_MAP = {
     'a': '%d0' % PROJECT_NUM,
@@ -42,17 +43,12 @@ env.VENV_PORT_PREFIX_MAP = {
     'h': '%d7' % PROJECT_NUM,
     'i': '%d8' % PROJECT_NUM,
 }
+
 # nginx配置
 ###########
 
 # 切换nginx环境
-env.NGINX_SWITCH_CONF = '/etc/nginx/extra/nginx.conf'
+env.NGINX_SWITCH_CONF = '/etc/nginx/nginx.conf'
 # nginx启动配置文件
-env.NGINX_CONF = '/etc/nginx/extra/nginx.conf'
+env.NGINX_CONF = '/etc/nginx/nginx.conf'
 env.NGINX_BIN = '/usr/sbin/nginx'
-
-env.SWITCH_VERSION_MAP = {
-    'a': 'upstreamA',
-    'b': 'upstreamB',
-}
-
