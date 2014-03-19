@@ -4,7 +4,7 @@ import os
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
 
-from fabric.state import env
+from fabric.state import 
 
 from essay.tasks import build
 from essay.tasks import deploy
